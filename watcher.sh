@@ -15,7 +15,8 @@ do
   RESTART_COUNT=$(kubectl get pod $POD_NAME -n $NAMESPACE -o json | jq '.status.containerStatuses[0].restartCount')
   echo -e "The restart count of the pod $POD_NAME is: $RESTART_COUNT \n"
 
-  if [ $RESTART_COUNT -gt $MAX_RESTART_COUNT ]; then
+
+  if (( RESTART_COUNT > MAX_RESTART_COUNT )); then
     echo -e "The pod $POD_NAME restarted more than $MAX_RESTART_COUNT times \n"
     echo -e "Scaling down $POD_NAME to 0...."
     DEPLOY_NAME=$(kubectl get deployments -n $NAMESPACE --no-headers -o custom-columns=":metadata.name" | grep 'swype' | head -n 1)
@@ -23,6 +24,6 @@ do
     break
   fi
 
-  sleep 60
+  sleep 5
 
 done

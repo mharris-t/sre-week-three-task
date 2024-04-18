@@ -1,12 +1,17 @@
 #TODO
 
 NAMESPACE="sre"
-POD_NAME="my-pod"
+POD_NAME=$(kubectl get pods -n sre --no-headers -o custom-columns=":metadata.name" | grep 'swype' | head -n 1)
 
 # Fetch the restart count using kubectl and jq to parse the JSON output
 RESTART_COUNT=$(kubectl get pod $POD_NAME -n $NAMESPACE -o json | jq '.status.containerStatuses[0].restartCount')
 
-echo "The restart count of the pod is: $RESTART_COUNT"
+echo "The restart count of the pod $POD_NAME is: $RESTART_COUNT"
 
-
-kubectl get pods -n sre --no-headers -o custom-columns=":metadata.name" | grep 'swype' | head -n 1
+while true
+do
+  echo 'Checking pod restarts...'
+  RESTART_COUNT=$(kubectl get pod $POD_NAME -n $NAMESPACE -o json | jq '.status.containerStatuses[0].restartCount')
+  echo "The restart count of the pod $POD_NAME is: $RESTART_COUNT"
+  sleep 1
+done

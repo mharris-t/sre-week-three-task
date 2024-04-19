@@ -1,0 +1,59 @@
+Fri Apr 19 07:45:26 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 1 
+
+Fri Apr 19 07:46:26 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 2 
+
+Fri Apr 19 07:47:26 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 3 
+
+Fri Apr 19 07:48:26 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 3 
+
+Fri Apr 19 07:49:26 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 4 
+
+Fri Apr 19 07:50:26 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 4 
+
+Fri Apr 19 07:51:27 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 5 
+
+Fri Apr 19 07:52:27 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 5 
+
+Fri Apr 19 07:53:27 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 5 
+
+Fri Apr 19 07:54:27 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 5 
+
+Fri Apr 19 07:55:27 UTC 2024
+Checking pod restarts...
+
+The restart count of the pod swype-app-5574bf65b4-h96w7 is: 6 
+
+The pod swype-app-5574bf65b4-h96w7 restarted more than 5 times 
+
+Scaling down swype-app-5574bf65b4-h96w7 to 0....
+deployment.apps/swype-app scaled
